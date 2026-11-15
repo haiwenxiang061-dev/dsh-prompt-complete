@@ -1,6 +1,6 @@
 {
   "name": "dsh-prompt-complete",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "Rewrite the composer draft into a complete prompt using the current conversation as context.",
   "author": "haiwenxiang061-dev",
