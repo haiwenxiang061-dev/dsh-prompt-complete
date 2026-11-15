@@ -15,7 +15,7 @@
 
 ## 安装
 
-### 一键安装（推荐）
+### 方式一：从 npm 安装
 
 ```bash
 dsh plugin --profile web add dsh-prompt-complete
@@ -25,11 +25,16 @@ dsh plugin --profile desktop add dsh-prompt-complete
 `desktop` 是带窗口的桌面 profile，`web` 是浏览器 profile；把 profile 名换成你实际要装的那个。
 装完刷新页面即可在 composer 工具行看到按钮（`conversation.input.right`，order 60），行内标注 **提示词完善**。
 
-从源码装（未发布 npm 的场景）：
+> 该包当前**尚未发布到 npm**，上面的命令会解析失败。现在要装请用方式二。
+
+### 方式二：从 GitHub 源码安装（现在可用）
 
 ```bash
 dsh plugin --profile web add github:haiwenxiang061-dev/dsh-prompt-complete
+dsh plugin --profile desktop add github:haiwenxiang061-dev/dsh-prompt-complete
 ```
+
+`dsh plugin` 会把参数转发给 profile 目录里的 pnpm，所以本机需要能调到 `pnpm`。
 
 > 包名说明：npm 上 `dsh-prompt-refine` 已被另一位维护者占用（功能是「发送前给出 3 条改进建议」，与本插件定位不同），所以这里改名为 `dsh-prompt-complete`，中文名仍为「提示词完善」。
 
