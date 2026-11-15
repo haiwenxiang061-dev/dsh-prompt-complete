@@ -1,0 +1,3 @@
+- insert:
+    - id: prompt-complete
+      name: dsh-prompt-complete

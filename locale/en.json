@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Prompt Refine",
+    "description": "Rewrites your draft into a complete prompt using the current conversation as context."
+  }
+}

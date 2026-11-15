@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Prompt Refine">
+  <rect width="32" height="32" rx="8" fill="#1c1c1f"/>
+  <path d="M14 6l2.1 5.5L21.6 13.6l-5.5 2.1L14 21.2l-2.1-5.5L6.4 13.6l5.5-2.1L14 6z" fill="#7fd1c1"/>
+  <path d="M23 18.4l1.1 2.9 2.9 1.1-2.9 1.1-1.1 2.9-1.1-2.9-2.9-1.1 2.9-1.1 1.1-2.9z" fill="#c8b6ff" opacity="0.92"/>
+</svg>

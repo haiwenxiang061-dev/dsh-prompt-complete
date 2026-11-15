@@ -1,0 +1,58 @@
+{
+  "name": "dsh-prompt-complete",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Rewrite the composer draft into a complete prompt using the current conversation as context.",
+  "author": "haiwenxiang061-dev",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.2 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haiwenxiang061-dev/dsh-prompt-complete.git"
+  },
+  "homepage": "https://github.com/haiwenxiang061-dev/dsh-prompt-complete#readme",
+  "bugs": {
+    "url": "https://github.com/haiwenxiang061-dev/dsh-prompt-complete/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "prompt",
+    "prompt-engineering",
+    "rewrite",
+    "composer"
+  ]
+}
