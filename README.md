@@ -15,7 +15,7 @@
 
 ## 安装
 
-### 方式一：从 npm 安装
+### 方式一：从 npm 安装（推荐）
 
 ```bash
 dsh plugin --profile web add dsh-prompt-complete
@@ -25,9 +25,9 @@ dsh plugin --profile desktop add dsh-prompt-complete
 `desktop` 是带窗口的桌面 profile，`web` 是浏览器 profile；把 profile 名换成你实际要装的那个。
 装完刷新页面即可在 composer 工具行看到按钮（`conversation.input.right`，order 60），行内标注 **提示词完善**。
 
-> 该包当前**尚未发布到 npm**，上面的命令会解析失败。现在要装请用方式二。
+npm 上已发布 `1.0.0`，用 `npm view dsh-prompt-complete version` 可查最新版。
 
-### 方式二：从 GitHub 安装（现在可用）
+### 方式二：从 GitHub 安装（不走 npm 时用）
 
 钉住 tag 的 tarball 地址，下载后直接解包安装，不需要 git 传输：
 
