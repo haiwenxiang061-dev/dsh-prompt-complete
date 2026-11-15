@@ -27,14 +27,24 @@ dsh plugin --profile desktop add dsh-prompt-complete
 
 > 该包当前**尚未发布到 npm**，上面的命令会解析失败。现在要装请用方式二。
 
-### 方式二：从 GitHub 源码安装（现在可用）
+### 方式二：从 GitHub 安装（现在可用）
+
+钉住 tag 的 tarball 地址，下载后直接解包安装，不需要 git 传输：
 
 ```bash
-dsh plugin --profile web add github:haiwenxiang061-dev/dsh-prompt-complete
-dsh plugin --profile desktop add github:haiwenxiang061-dev/dsh-prompt-complete
+dsh plugin --profile web add https://codeload.github.com/haiwenxiang061-dev/dsh-prompt-complete/tar.gz/refs/tags/v1.0.0
+dsh plugin --profile desktop add https://codeload.github.com/haiwenxiang061-dev/dsh-prompt-complete/tar.gz/refs/tags/v1.0.0
 ```
 
-`dsh plugin` 会把参数转发给 profile 目录里的 pnpm，所以本机需要能调到 `pnpm`。
+Release 里也挂了同一份 `.tgz` 附件，想用 GitHub 的下载页可以换成：
+
+```bash
+dsh plugin --profile desktop add https://github.com/haiwenxiang061-dev/dsh-prompt-complete/releases/download/v1.0.0/dsh-prompt-complete-1.0.0.tgz
+```
+
+两点实测注意：
+- `dsh plugin` 会把参数转发给 profile 目录里的 pnpm，所以本机需要能调到 `pnpm`（`npm i -g pnpm` 即可）。
+- 不建议用 `github:haiwenxiang061-dev/dsh-prompt-complete` 这种简写：它走 git 传输协议，在国内网络下经常被 reset；上面的 codeload 地址走 HTTPS 下载，稳定得多。
 
 > 包名说明：npm 上 `dsh-prompt-refine` 已被另一位维护者占用（功能是「发送前给出 3 条改进建议」，与本插件定位不同），所以这里改名为 `dsh-prompt-complete`，中文名仍为「提示词完善」。
 
